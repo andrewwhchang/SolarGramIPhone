@@ -19,7 +19,6 @@ struct ContentView: View {
         .ignoresSafeArea(edges: .leading)
         .ignoresSafeArea(edges: .trailing)
 //        .padding()
-        //        NavigationBarView()
         
     }
 }
