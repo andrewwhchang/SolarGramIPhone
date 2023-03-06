@@ -12,6 +12,7 @@ struct SolarGramIPhoneApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            NavigationBarView()
         }
     }
 }

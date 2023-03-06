@@ -11,6 +11,13 @@
 		48B4738D29B5866F00878D99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B4738C29B5866F00878D99 /* ContentView.swift */; };
 		48B4738F29B5867100878D99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48B4738E29B5867100878D99 /* Assets.xcassets */; };
 		48B4739229B5867100878D99 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48B4739129B5867100878D99 /* Preview Assets.xcassets */; };
+		48B4739929B586A600878D99 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B4739829B586A600878D99 /* PhotoView.swift */; };
+		48B4739B29B5877200878D99 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B4739A29B5877200878D99 /* ProfileView.swift */; };
+		48B4739D29B5878A00878D99 /* UserPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B4739C29B5878A00878D99 /* UserPhoto.swift */; };
+		48B4739F29B5879E00878D99 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B4739E29B5879E00878D99 /* Photos.swift */; };
+		48B473A129B587B300878D99 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B473A029B587B300878D99 /* Profile.swift */; };
+		48B473A329B587C100878D99 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B473A229B587C100878D99 /* ModelData.swift */; };
+		48B473A729B5896B00878D99 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B473A629B5896B00878D99 /* NavigationBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		48B4738C29B5866F00878D99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		48B4738E29B5867100878D99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48B4739129B5867100878D99 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		48B4739829B586A600878D99 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		48B4739A29B5877200878D99 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		48B4739C29B5878A00878D99 /* UserPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhoto.swift; sourceTree = "<group>"; };
+		48B4739E29B5879E00878D99 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		48B473A029B587B300878D99 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		48B473A229B587C100878D99 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		48B473A629B5896B00878D99 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				48B4738A29B5866F00878D99 /* SolarGramIPhoneApp.swift */,
-				48B4738C29B5866F00878D99 /* ContentView.swift */,
+				48B473A429B587E100878D99 /* VViews */,
+				48B473A529B587F800878D99 /* Models */,
 				48B4738E29B5867100878D99 /* Assets.xcassets */,
 				48B4739029B5867100878D99 /* Preview Content */,
 			);
@@ -65,6 +80,28 @@
 				48B4739129B5867100878D99 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		48B473A429B587E100878D99 /* VViews */ = {
+			isa = PBXGroup;
+			children = (
+				48B4738C29B5866F00878D99 /* ContentView.swift */,
+				48B473A629B5896B00878D99 /* NavigationBarView.swift */,
+				48B4739A29B5877200878D99 /* ProfileView.swift */,
+				48B4739C29B5878A00878D99 /* UserPhoto.swift */,
+				48B4739829B586A600878D99 /* PhotoView.swift */,
+			);
+			path = VViews;
+			sourceTree = "<group>";
+		};
+		48B473A529B587F800878D99 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				48B4739E29B5879E00878D99 /* Photos.swift */,
+				48B473A229B587C100878D99 /* ModelData.swift */,
+				48B473A029B587B300878D99 /* Profile.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +174,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48B4739F29B5879E00878D99 /* Photos.swift in Sources */,
+				48B4739B29B5877200878D99 /* ProfileView.swift in Sources */,
+				48B4739D29B5878A00878D99 /* UserPhoto.swift in Sources */,
+				48B473A129B587B300878D99 /* Profile.swift in Sources */,
+				48B4739929B586A600878D99 /* PhotoView.swift in Sources */,
+				48B473A329B587C100878D99 /* ModelData.swift in Sources */,
 				48B4738D29B5866F00878D99 /* ContentView.swift in Sources */,
 				48B4738B29B5866F00878D99 /* SolarGramIPhoneApp.swift in Sources */,
+				48B473A729B5896B00878D99 /* NavigationBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
