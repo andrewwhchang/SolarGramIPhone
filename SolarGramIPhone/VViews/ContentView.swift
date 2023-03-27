@@ -8,25 +8,71 @@
 import SwiftUI
 
 struct ContentView: View {
-    //    @EnvironmentObject var modelData: ModelData
+    
+    @State private var selection: Tab = .photos
+    
+    enum Tab {
+           case photos
+           case profile
+       }
+    
+    @StateObject var viewModel: PublicPostViewModel = PublicPostViewModel()
+    @State private var showImagePicker = false
+    @State private var showCameraPicker = false
+    
     
     var body: some View {
-        ScrollView {
-            ForEach (photoList, id: \.id) { photo in
-                PhotoView(photo: photo)
-            }
+    
+        TabView(selection: $selection) {
+            PhotoList()
+                .environmentObject(viewModel)
+                .tabItem {
+                    Label("Photos", systemImage: "photo.stack")
+                }
+                .tag(Tab.photos)
+                .overlay(
+                    ZStack {
+                        Rectangle()
+                            .frame(height: 60)
+                            .foregroundColor(.white)
+                        HStack{
+                            Button {
+                                showImagePicker.toggle()
+                            } label: {
+                                Image(systemName: "photo")}
+                            .foregroundColor(.black)
+                            
+                            Button {
+                                showCameraPicker.toggle()
+                            } label: {
+                                Image(systemName: "camera")}
+                            .foregroundColor(.black)
+                        }
+                    }
+                        ,
+                    alignment: .bottom
+                    )
+            ProfileView()
+                .environmentObject(viewModel)
+                .tabItem {
+                    Label("Profile", systemImage: "person.crop.circle")
+                }
+                .tag(Tab.profile)
+            
         }
-        .ignoresSafeArea(edges: .leading)
-        .ignoresSafeArea(edges: .trailing)
-//        .padding()
-        
+
+        .sheet(isPresented: $showImagePicker) {
+            ImagePicker(viewModel: PublicPostViewModel())
+        }
+        .sheet(isPresented: $showCameraPicker) {
+            ImagePicker(viewModel: PublicPostViewModel())
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
-
     static var previews: some View {
         ContentView()
-//            .environmentObject(ModelData())
+            .environmentObject(PublicPostViewModel())
     }
 }

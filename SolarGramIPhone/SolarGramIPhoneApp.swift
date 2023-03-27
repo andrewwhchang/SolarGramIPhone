@@ -8,10 +8,11 @@
 import SwiftUI
 
 @main
-struct SolarGramIPhoneApp: App {
+struct SolarGramApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationBarView()
+            ContentView()
+            
         }
     }
 }
